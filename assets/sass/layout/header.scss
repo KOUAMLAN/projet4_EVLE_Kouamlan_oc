@@ -1,0 +1,77 @@
+@import "../utils/mixins";
+@import "../utils/variables";
+
+.header {
+  display: flex;
+  justify-content: center; // Centrer le container principal
+  align-items: center;
+  height: 63px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  position: relative;
+  width: 100%;
+  background: #fff;
+
+  &__container {
+    width: 100%;
+    max-width: 1440px; // Ajuste selon ta maquette
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 0 24px;
+    height: 100%;
+  }
+
+  &__back-link {
+    position: absolute;
+    left: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: #000;
+    text-decoration: none;
+    z-index: 2;
+  }
+
+  &__logo {
+    margin: 0 auto;
+    width: 130px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  &__heart {
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    color: #e74c3c;
+    cursor: pointer;
+    z-index: 2;
+    transition: color 0.2s;
+
+    &:hover {
+      color: darken(#e74c3c, 10%);
+    }
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    &__container {
+      padding: 0 48px;
+    }
+
+    &__logo {
+      width: 162px;
+    }
+  }
+}

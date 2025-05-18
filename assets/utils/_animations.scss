@@ -1,0 +1,60 @@
+// Loader animation
+@keyframes loader-spin {
+  0% { transform: rotate(0deg);}
+  100% { transform: rotate(360deg);}
+}
+
+.loader {
+  border: 6px solid $background-light;
+  border-top: 6px solid $primary-color;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: loader-spin 1s linear infinite;
+  margin: 80px auto;
+}
+
+// Menu items slide in
+@keyframes slideInRight {
+  from { transform: translateX(100%); opacity: 0;}
+  to { transform: translateX(0); opacity: 1;}
+}
+
+// Animation progressive pour les items (exemple avec nth-child)
+.menu-entrées .menu-item:nth-child(1) { animation: slideInRight 0.5s 0.1s both; }
+.menu-entrées .menu-item:nth-child(2) { animation: slideInRight 0.5s 0.2s both; }
+.menu-entrées .menu-item:nth-child(3) { animation: slideInRight 0.5s 0.3s both; }
+.menu-entrées .menu-item:nth-child(4) { animation: slideInRight 0.5s 0.4s both; }
+
+.menu-plats .menu-item:nth-child(1) { animation: slideInRight 0.5s 1.1s both; }
+.menu-plats .menu-item:nth-child(2) { animation: slideInRight 0.5s 1.2s both; }
+.menu-plats .menu-item:nth-child(3) { animation: slideInRight 0.5s 1.3s both; }
+.menu-plats .menu-item:nth-child(4) { animation: slideInRight 0.5s 1.4s both; }
+
+.menu-desserts .menu-item:nth-child(1) { animation: slideInRight 0.5s 2.1s both; }
+.menu-desserts .menu-item:nth-child(2) { animation: slideInRight 0.5s 2.2s both; }
+.menu-desserts .menu-item:nth-child(3) { animation: slideInRight 0.5s 2.3s both; }
+.menu-desserts .menu-item:nth-child(4) { animation: slideInRight 0.5s 2.4s both; }
+
+// Fade In Up
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Application progressive sur les sections principales
+.heros {
+  animation: fadeInUp 0.7s cubic-bezier(.72,-0.01,.19,.92) 0.2s both;
+}
+.fonctionnement {
+  animation: fadeInUp 0.7s cubic-bezier(.72,-0.01,.19,.92) 0.4s both;
+}
+.restaurants {
+  animation: fadeInUp 0.7s cubic-bezier(.72,-0.01,.19,.92) 0.6s both;
+}

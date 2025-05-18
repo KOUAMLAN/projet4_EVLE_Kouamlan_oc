@@ -1,0 +1,82 @@
+.card {
+  background-color: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+  &:hover { transform: translateY(-5px); }
+  &__image {
+    position: relative;
+    img {
+      width: 100%; height: 175px;
+      object-fit: cover;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+    }
+  }
+  &__badge {
+    position: absolute;
+    top: 1rem; right: 1rem;
+    background-color: #99e2d0;
+    color: #008766;
+    padding: 0.5rem;
+    border-radius: 2px;
+    font-weight: bold;
+    font-size: 0.95rem;
+  }
+  &__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    flex:  1 1 0;
+    min-width: 0;
+  }
+  &__title,
+  &__subtitle,
+  &__desc {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    min-width: 0;
+    display: block;
+    color: inherit;
+    text-decoration: none !important;
+    max-width: 100%;
+  }
+  &__title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #101010;
+  }
+  &__subtitle {
+    font-size: 1rem;
+    color:  #666666;
+  }
+  &__desc {
+    font-size: 0.95rem;
+    color: #888;
+  }
+}
+.btn-like {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 3;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

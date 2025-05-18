@@ -1,0 +1,18 @@
+.card__title,
+.card__subtitle,
+.card__desc,
+.menu-item__title,
+.menu-item__description,
+.menu-item__desc {
+  text-decoration: none !important;
+}
+
+.card__title a,
+.card__subtitle a,
+.card__desc a,
+.menu-item__title a,
+.menu-item__description a,
+.menu-item__desc a {
+  text-decoration: none !important;
+  color: inherit;
+}/*# sourceMappingURL=fixes.css.map */

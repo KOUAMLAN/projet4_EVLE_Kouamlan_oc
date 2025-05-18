@@ -1,0 +1,60 @@
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin button-style {
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+@mixin card-style {
+  background-color: $white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: $shadow-md;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@mixin heart-animation {
+  .far {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    transition: opacity 0.3s;
+  }
+  .fas {
+    opacity: 0;
+    transition: opacity 0.3s;
+    background: linear-gradient(to bottom, #9356dc, #ff79da);
+    -webkit-background-clip: text;
+    color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  &:hover .far {
+    opacity: 0;
+  }
+  &:hover .fas {
+    opacity: 1;
+  }
+}
+
+@mixin responsive($breakpoint) {
+  @if $breakpoint == tablet {
+    @media (min-width: $breakpoint-tablet) {
+      @content;
+    }
+  } @else if $breakpoint == desktop {
+    @media (min-width: $breakpoint-desktop) {
+      @content;
+    }
+  }
+}

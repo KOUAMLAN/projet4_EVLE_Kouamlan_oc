@@ -1,0 +1,64 @@
+@import "../utils/mixins";
+@import "../utils/variables";
+
+.pied-de-page {
+  background-color: $dark-grey;
+  color: $white;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+
+  @media (min-width: $breakpoint-tablet) {
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 30px 25px;
+  }
+
+  .footer__logo {
+    font-family: $font-secondary;
+    font-size: 1.2rem;
+    margin: 0;
+
+    @media (min-width: $breakpoint-tablet) {
+      order: 1;
+      margin-right: auto;
+    }
+  }
+
+  .footer__nav {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $breakpoint-tablet) {
+      order: 0;
+      flex-direction: row;
+    }
+
+    li {
+      margin: 0;
+
+      @media (min-width: $breakpoint-tablet) {
+        margin-right: 2rem;
+      }
+
+      a {
+        color: $white;
+        text-decoration: none;
+        display: block;
+        padding: 0.5rem;
+      }
+
+      i {
+        width: 1.5rem;
+        margin-right: 0.5rem;
+        display: inline-block;
+      }
+    }
+  }
+}

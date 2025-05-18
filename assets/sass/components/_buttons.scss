@@ -1,0 +1,52 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+.btn {
+  @include button-style;
+  color: $white;
+  background: linear-gradient(to bottom right, $secondary-color, $primary-color);
+  box-shadow: $shadow-md;
+  border: none;
+  border-radius: 25px;
+  padding: 13px 18.75px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: opacity 0.3s, box-shadow 0.3s;
+
+  &:hover, &:focus {
+    opacity: 0.9;
+    box-shadow: $shadow-lg;
+  }
+
+  &--primary {
+    background: linear-gradient(193.33deg, $primary-color -11.44%, $secondary-color 123.93%);
+    box-shadow: $shadow-lg;
+  }
+
+  &--gradient {
+    display: block;
+    margin: $gap-large auto;
+    width: fit-content;
+  }
+}
+
+// Exemple pour un bouton coche (si jamais tu en fais un vrai bouton)
+.btn-check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+  box-shadow: $shadow-sm;
+
+  &:hover, &:focus {
+    box-shadow: $shadow-md;
+  }
+}

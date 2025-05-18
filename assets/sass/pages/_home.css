@@ -1,0 +1,13 @@
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px);}
+  to   { opacity: 1; transform: translateY(0);}
+}
+.heros {
+  animation: fadeInUp 0.7s cubic-bezier(.72,-0.01,.19,.92) 0.2s both;
+}
+.fonctionnement {
+  animation: fadeInUp 0.7s cubic-bezier(.72,-0.01,.19,.92) 0.4s both;
+}
+.restaurants {
+  animation: fadeInUp 0.7s cubic-bezier(.72,-0.01,.19,.92) 0.6s both;
+}
